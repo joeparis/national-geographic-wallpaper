@@ -53,7 +53,7 @@ from comun import _
 URL00 = 'http://www.nationalgeographic.com/photography/photo-of-the-day/\
 _jcr_content/.gallery.'
 URL01 = 'http://www.bing.com/HPImageArchive.aspx?\
-format=xml&idx=0&n=1&mkt=en-ww'
+format=xml&idx=0&n=1&mkt=en-US'
 URL02 = 'https://api.gopro.com/v2/channels/feed/playlists/\
 photo-of-the-day.json?platform=web&page=1&per_page=1'
 URL03 = 'http://www.powder.com/photo-of-the-day/'
@@ -204,7 +204,7 @@ def set_bing_wallpaper():
             print('===========')
             image = xml.find('image')
             urlBase = image.find('urlBase')
-            url = 'http://www.bing.com%s_1920x1200.jpg' % (urlBase.text)
+            url = 'http://www.bing.com%s_1920x1080.jpg' % (urlBase.text)
             if download(url) is True:
                 set_background(comun.POTD)
             print('===========')
